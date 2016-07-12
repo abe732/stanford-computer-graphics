@@ -51,7 +51,7 @@ void problem1() {
     float rotationAngle;
     float translateAngle;
     
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 6; i++) {
         float rotationAngle = i*30;
         float translateAngleA = cos(i);
         float translateAngleB = sin(i);
@@ -60,21 +60,9 @@ void problem1() {
         glTranslatef(translateAngleA, translateAngleB, 0);
         glRotatef(rotationAngle, 0, 0, 1);
         glutSolidTeapot(.2);
-        
-
-//        glPushMatrix();
-//        glTranslatef(-translateAngle, 0, 0);
-//        glRotatef(-rotationAngle, 0, 0, 1);
-//        glutSolidTeapot(.2);
-//        glPopMatrix();
-        
-//        glPushMatrix();
-//        glTranslatef(1, 1, 0);
-//        glRotatef(-30, 0, 0, 1);
-//        glutSolid1Teapot(.2);
+ 
         glPopMatrix();
     }
-//    glPopMatrix();
     glFlush();
 
 }

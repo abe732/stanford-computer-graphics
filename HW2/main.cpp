@@ -73,9 +73,6 @@ void problem2() {
     glTranslatef(-1, 0, 0);
     
     for (int i = 0; i < 10; i++) {
-//        float base = i / 10;
-//        float yScalar = pow(base, 2);
-//        float yScalar = i / 10;
         float xShift = .2;
         
         glPushMatrix();

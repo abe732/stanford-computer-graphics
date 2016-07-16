@@ -40,102 +40,309 @@ using namespace std;
 bool leftDown = false, rightDown = false;
 int lastPos[2];
 float cameraPos[4] = {0,1,4,1};
-int windowWidth = 640, windowHeight = 480;
+int windowWidth = 1000, windowHeight = 640;
 double yRot = 0;
-int curProblem = 1; // TODO: change this number to try different examples
+int curProblem = 4; // TODO: change this number to try different examples
 
 float specular[] = { 1.0, 1.0, 1.0, 1.0 };
 float shininess[] = { 50.0 };
 
 void problem1() {
-    float rotationAngle;
-    float translateAngle;
+    int x = 0;
+    int y = 0;
+    int angleRot = 0;
     
-    for (int i = 0; i < 6; i++) {
-        float rotationAngle = i*30;
-        float translateAngleA = cos(i);
-        float translateAngleB = sin(i);
+    glPushMatrix();
+    for (int i=0; i<10; i++) {
+        float translateAngleA = cos(x * 3.14 / 180.0);
+        float translateAngleB = sin(y * 3.14 / 180.0);
         
         glPushMatrix();
         glTranslatef(translateAngleA, translateAngleB, 0);
-        glRotatef(rotationAngle, 0, 0, 1);
+        glRotatef(180, 0, 1, 0);
+        glRotatef(angleRot, 0, 0, 1);
         glutSolidTeapot(.2);
- 
         glPopMatrix();
+        
+        x += 36;
+        y += 36;
+        angleRot += sin(x * 3.14 / 180.0) - 36 ;
     }
+    glPopMatrix();
     glFlush();
 
 }
 
 void problem2() {
+    float xShift = 1;
+    float yScale = 1;
+    float yShift = 0;
     
     glPushMatrix();
-    glTranslatef(-1, 0, 0);
+    glTranslatef(-2.1, 0, 0);
     
-    for (int i = 0; i < 10; i++) {
-        float xShift = .2;
-        
+    for (int i = 0; i < 15; i++) {
         glPushMatrix();
-        glTranslatef(xShift, 0, 0);
-        glScalef(1, 1.2, 1);
-        glutSolidCube(.2);
+        glTranslatef(xShift, yShift, 0);
+        glScalef(1, yScale, 1);
+        glutSolidCube(.15);
+        glPopMatrix();
+        
+        xShift += .15;
+        yScale += .15;
+        yShift += .01;
     }
     glPopMatrix();
+    glFlush();
 }
-
 
 void problem3() {
-    
+    float xShift = 0;
+    float yShift = 0;
+    float teapotSize = .2;
     glPushMatrix();
-    glTranslatef(-1, 1, 0);
+    glTranslatef(.25, 1.25, 0);
     
-    for (int i = 1; i < 7; i ++) {
-    glPushMatrix(); // base frame
-    glutSolidTeapot(.2);
-    
-    glPushMatrix();
-    glTranslatef(0, -.25, 0); //new level below
-    
-    for (int j = i; j > 0; j-- ){
+    for (int i = 1; i < 7; i ++) { //new level below
+        float xCenter = -(xShift) - (i * (teapotSize * 1.5));
         glPushMatrix();
-        glTranslatef(.25, 0, 0); //move sideways by incrementing x
-        glutSolidTeapot(.2);
-    }
+        glTranslatef(xCenter, yShift, 0);
     
-    glPopMatrix();
+        for (int j = i; j > 0; j-- ){ //move sidewaya
+            glPushMatrix();
+            glTranslatef(xShift, 0, 0);
+            glutSolidTeapot(teapotSize);
+            glPopMatrix();
+            
+            xShift += .7;
+        }
+        
+        yShift -= .4;
+        glPopMatrix();
         
     }
     glPopMatrix();
+    glFlush();
     
 }
 
-//helper functions for problem 4
-void leg () {
+//helper functions for problem 4:
+
+void beak () { //tried to make yellow
+    glBegin( GL_TRIANGLES );
+    
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(0.0f, 1.f, 0.0f );
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f );
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(1.0f, -1.0f, 1.0f);
+    
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(0.0f, 1.0f, 0.0f);
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f);
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(0.0f, -1.0f, -1.0f);
+    
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(0.0f, 1.0f, 0.0f);
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(0.0f, -1.0f, -1.0f);
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(1.0f, -1.0f, 1.0f);
+    
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(-1.0f, -1.0f, 1.0f);
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(0.0f, -1.0f, -1.0f);
+    glColor3f(1.0f, 1.0f, 0.0f); glVertex3f(1.0f, -1.0f, 1.0f);
+    
+    glEnd();
+}
+
+void head () {
     glPushMatrix();
-    glutSolidCone(.2, .5, 4, 4);
+    glTranslatef(0, .6, .6);
+    glScalef(.9, 1, 1.2);
+    glutSolidSphere(.3, 10, 10);
     glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(.18, .7, .8);
+    glutSolidSphere(.05, 5, 5);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(-.18, .7, .8);
+    glutSolidSphere(.05, 5, 5);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(0, .5, .98);
+    glScalef(.18f, .15f, .3f);
+    glRotatef(130, 1, 0, 0);
+    beak();
+    glEnd();
+    
+    glPopMatrix();
+}
+
+void tail () {
+    glPushMatrix();
+    glTranslatef(0, -.4, -.4);
+    glScalef(.25, .5, .5);
+    glRotatef(-15, 1, 0, 0);
+    glRotatef(180, 0, 1, 0);
+    
+    glBegin( GL_TRIANGLES );
+    
+    glColor3f(1.0, 1.0, 0.0); glVertex3f(0.0f, 1.f, 0.0f );
+    glColor3f(1, 1, 0); glVertex3f(-1.0f, -1.0f, 1.0f );
+    glColor3f(1, 1, 0); glVertex3f(1.0f, -1.0f, 1.0f);
+    
+    glEnd();
+    
+    glPopMatrix();
+}
+
+void torso () {
+    glPushMatrix();
+    glRotatef(-45, 1, 0 ,0);
+    glScalef(.4, .5, .9);
+    glutSolidSphere(1, 10, 10);
+    glPopMatrix();
+}
+
+void legs () {
+    glPushMatrix();
+    
+    glPushMatrix();
+    glTranslatef(-.15, -.5, .2);
+    glRotatef(-15, 1, 0 ,0);
+    glScalef(.15, 2, .15);
+    glutSolidCube(.3);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(-.15, -.78, .28);
+    glutSolidSphere(.04, 5, 5);
+    
+    glPushMatrix();
+    glTranslatef(0, -.10, .16);
+    glRotatef(-60, 1, 0 ,0);
+    glScalef(.15, 1.25, .15);
+    glutSolidCube(.3);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(0, -.18, .25);
+    glRotatef(-30, 0, 1, 0);
+    glPushMatrix();
+    glutSolidCone(.04, .3, 5, 5);
+    glRotatef(25, 0, 1, 0);
+    glutSolidCone(.04, .3, 5, 5);
+    glRotatef(25, 0, 1, 0);
+    glutSolidCone(.04, .3, 5, 5);
+    glPopMatrix();
+    glPopMatrix();
+    
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(.15, -.5, .2);
+    glRotatef(-15, 1, 0 ,0);
+    glScalef(.15, 2, .15);
+    glutSolidCube(.3);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(.15, -.78, .28);
+    glutSolidSphere(.05, 5, 5);
+    
+    glPushMatrix();
+    glTranslatef(0, -.10, .16);
+    glRotatef(-60, 1, 0 ,0);
+    glScalef(.15, 1.25, .15);
+    glutSolidCube(.3);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(0, -.18, .25);
+    glRotatef(-30, 0, 1, 0);
+    glPushMatrix();
+    glutSolidCone(.04, .3, 5, 5);
+    glRotatef(25, 0, 1, 0);
+    glutSolidCone(.04, .3, 5, 5);
+    glRotatef(25, 0, 1, 0);
+    glutSolidCone(.04, .3, 5, 5);
+    glPopMatrix();
+    glPopMatrix();
+    
+    glPopMatrix();
+    
+    glPopMatrix();
+}
+
+void feather () {
+    glPushMatrix();
+    glScalef(.5, 4, .3);
+    glutSolidCube(.2);
+    glPopMatrix();
+}
+
+void wing() {
+    float zScale = 1;
+    float xScale = .5;
+    float yScale = 3;
+    float tipShift = 1;
+    
+    for (int i=0; i<15; i++) {
+        float xShift = (i*.13);
+        glPushMatrix();
+        glTranslatef(xShift, 0, 0);
+        glPopMatrix();
+    }
+    
+    for (int i=0; i<20; i++) {
+        float xShift = i * .12;
+        float featherRot = -i * 3;
+        glPushMatrix();
+        glTranslatef(xShift, .8, 0);
+        glScalef(1, 2, .1);
+        
+        glPushMatrix();
+        glRotatef(featherRot, 0, 0, 1);
+        glScalef(xScale, yScale, zScale);
+        glutSolidCube(.2);
+        glPopMatrix();
+       
+        glPopMatrix();
+        
+        yScale += .35;
+        zScale -= .05;
+    }
 }
 
 void problem4() {
+    glPushMatrix();
+    glTranslatef(0, .5, -.5);
+    glScalef(.75, .75, .75);
     
-    //make leg
-    
-        //make knee
-        //make foot
-    
-    //make head
-    
-    //
+    torso();
+    head();
+    tail();
     
     glPushMatrix();
-    glTranslatef(-.75, .2, .75); //in front
-        glPushMatrix();
-        glTranslatef(0, .2, 0);
-        leg();
-        glPopMatrix();
-    //draw leg on top of head
-    glutSolidSphere(.2, 10, 5);
+    glRotatef(15, 1, 0, 0);
+    legs();
     glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(-.25, .4, 0);
+    glRotatef(-30, 0, 1, 0);
+    glRotatef(-180, 1, 0, 1);
+    wing();
+    glPopMatrix();
+    glPushMatrix();
+    glTranslatef(.25, .4, 0);
+    glRotatef(30, 0, 1, 0);
+    glRotatef(-180, 1, 0, 1);
+    wing();
+    glPopMatrix();
+    
+    glPopMatrix();
+    
+    glFlush();
 }
 
 void display() {

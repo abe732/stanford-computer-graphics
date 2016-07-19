@@ -15,5 +15,6 @@ void main()
 {
     // TODO: Replace with your code...
     // If gl_Position was set correctly, this gives a totally red cube
+    //should take as an input the vertex shader output and apply to fragments
     color = vec4(vec3(1.f,0.f,0.f), 1.0f);
 } 

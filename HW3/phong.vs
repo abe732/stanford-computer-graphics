@@ -15,4 +15,6 @@ void main()
 {
     // TODO: Your code here
     // Remember to set gl_Position (correctly) or you will get a black screen...
+    //should output eye-coordinates, texture coords, fog, and color coords
+    
 } 

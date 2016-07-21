@@ -13,8 +13,7 @@ uniform mat4 projection;
 
 void main()
 {
-    // TODO: Your code here
-    // Remember to set gl_Position (correctly) or you will get a black screen...
-    //should output eye-coordinates, texture coords, fog, and color coords
-    
-} 
+    gl_Position = projection * view * model * vec4(position, 1.0f);
+    FragPos = vec3(model * vec4(position, 1.0f));
+    Normal = mat3(transpose(inverse(model))) * normal;
+}

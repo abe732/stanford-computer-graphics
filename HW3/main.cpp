@@ -186,7 +186,10 @@ int main()
         // Create camera transformations
         glm::mat4 view;
         view = camera.GetViewMatrix();
-        glm::mat4 projection = glm::perspective(camera.Zoom, (GLfloat)w / (GLfloat)h, 0.1f, 100.0f);
+        view = glm::translate(view, glm::vec3(0.1f, 0.0f, 0.0f));
+        glm::mat4 projection = glm::perspective(camera.Zoom, (GLfloat)w / (GLfloat)h, 0.3f, 100.0f);
+        projection = glm::rotate(projection, 0.45f, glm::vec3(0.0f, 1.0f, 0.0f));
+        
         // Get the uniform locations
         GLint modelLoc = glGetUniformLocation(lightingShader.Program, "model");
         GLint viewLoc  = glGetUniformLocation(lightingShader.Program,  "view");

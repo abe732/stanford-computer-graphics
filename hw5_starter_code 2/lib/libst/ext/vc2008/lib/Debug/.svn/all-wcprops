@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug
+END
+zlib_d.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/zlib_d.pdb
+END
+jpeg.lib
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/jpeg.lib
+END
+jpeg_d.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/jpeg_d.pdb
+END
+freetype231.lib
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/freetype231.lib
+END
+libpng.lib
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/libpng.lib
+END
+freetype231_d.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/freetype231_d.pdb
+END
+libpng_d.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/libpng_d.pdb
+END
+glew.pdb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/glew.pdb
+END
+glew.lib
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/glew.lib
+END
+zlib.lib
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Debug/zlib.lib
+END

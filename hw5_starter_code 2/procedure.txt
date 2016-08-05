@@ -1,0 +1,5 @@
+Given a mesh M with vertices V and faces F:
+(1) For a number of iterations N:
+(2) Make a new mesh M’ with the same number of vertices V’ and faces F’ as the mesh from the previous iteration, call it M_prev.
+(3) For each vertex v_i in V_prev:
+	Compute the laplacian smoothed vertex v_i’ and assign it to that vertex in V’ in M’.

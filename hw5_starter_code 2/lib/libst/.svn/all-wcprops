@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/89/trunk/lib/libst
+END
+STColor4ub.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/4/trunk/lib/libst/STColor4ub.cpp
+END
+STImage_ppm.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/4/trunk/lib/libst/STImage_ppm.cpp
+END
+STShaderProgram.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/4/trunk/lib/libst/STShaderProgram.cpp
+END
+STJoystick.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/4/trunk/lib/libst/STJoystick.cpp
+END
+STTexture.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/4/trunk/lib/libst/STTexture.cpp
+END
+STShape.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/4/trunk/lib/libst/STShape.cpp
+END
+STJoystick_darwin.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/lib/libst/STJoystick_darwin.cpp
+END
+STFont.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/4/trunk/lib/libst/STFont.cpp
+END
+STColor3f.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/4/trunk/lib/libst/STColor3f.cpp
+END
+STColor4f.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/4/trunk/lib/libst/STColor4f.cpp
+END
+STPoint2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/4/trunk/lib/libst/STPoint2.cpp
+END
+STPoint3.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/4/trunk/lib/libst/STPoint3.cpp
+END
+STJoystick_linux.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/4/trunk/lib/libst/STJoystick_linux.cpp
+END
+STTimer.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/4/trunk/lib/libst/STTimer.cpp
+END
+STJoystick_win32.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/4/trunk/lib/libst/STJoystick_win32.cpp
+END
+STImage.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/4/trunk/lib/libst/STImage.cpp
+END
+STVector2.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/4/trunk/lib/libst/STVector2.cpp
+END
+STVector3.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/4/trunk/lib/libst/STVector3.cpp
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/4/trunk/lib/libst/Makefile
+END
+STImage_png.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/4/trunk/lib/libst/STImage_png.cpp
+END
+STImage_jpeg.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/4/trunk/lib/libst/STImage_jpeg.cpp
+END

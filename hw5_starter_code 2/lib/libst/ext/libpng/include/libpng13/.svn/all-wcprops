@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/4/trunk/lib/libst/ext/libpng/include/libpng13
+END
+pngconf.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/4/trunk/lib/libst/ext/libpng/include/libpng13/pngconf.h
+END
+png.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/4/trunk/lib/libst/ext/libpng/include/libpng13/png.h
+END

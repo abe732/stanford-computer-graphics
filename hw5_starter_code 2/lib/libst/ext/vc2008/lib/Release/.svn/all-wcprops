@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Release
+END
+libpng.lib
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Release/libpng.lib
+END
+glew.lib
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Release/glew.lib
+END
+zlib.lib
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Release/zlib.lib
+END
+jpeg.lib
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Release/jpeg.lib
+END
+freetype231.lib
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/4/trunk/lib/libst/ext/vc2008/lib/Release/freetype231.lib
+END

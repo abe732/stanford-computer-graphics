@@ -1,0 +1,11 @@
+http://wiki.unity3d.com/index.php?title=MeshSmoother
+
+HC’s algorithm for fighting the “mesh-downsizing” problem of simple laplacian smoothing
+(extra credit?):
+http://www.joerg-vollmer.de/downloads/Improved_Laplacian_Smoothing_of_Noisy_Surface_Meshes.pdf
+
+some obj’s:
+http://people.sc.fsu.edu/~jburkardt/data/obj/obj.html
+
+old 2009 graphics class assignment 3 - catmull+clark subdivisions:
+https://graphics.stanford.edu/wikis/cs148-09-summer/Assignment3Description
